@@ -634,7 +634,7 @@ if (pVal > 1.775 && pVal <= 1.8) {
   if (pVal >= 2.7 && pVal < 2.8) {
     const t = (pVal - 2.7) / 0.1;
     const start = 1.00;
-    const end = 2.79999;
+    const end = 2.7999;
     const exp = (start + t * (end - start));
     return `Ω[⬆️⬆️]${d(exp)}`;
   }
@@ -644,11 +644,11 @@ if (pVal > 1.775 && pVal <= 1.8) {
 const highestpVal = 2.8
   if (pVal > 10**308) {
     const t = (pVal - 10**308)/7.976931348623157e+307
-    return `(<span class="blue">↻</span>↑↑${displayedValueFor(t*(100-0.2)+1.2)})<sup>${d((pVal-4.9)%(highestpVal-1) + 1)}</sup>`
+    return `(<span class="blue">↻</span>↑↑${displayedValueFor(t*(100-0.2)+1.2)})<sup>${d((pVal-2.25)%(highestpVal-1) + 1)}</sup>`
 }
   if (pVal > highestpVal*10**21 - 1) {
     const inverseT = (Math.log(pVal) + 3280*Math.log(10)) / (2990*Math.log(10))
-    return `(<span class="blue">↻</span>↑↑` + d(inverseT) + ")<sup>" + d((pVal-4.9)%(highestpVal-1) + 1) + "</sup>"
+    return `(<span class="blue">↻</span>↑↑` + d(inverseT) + ")<sup>" + d((pVal-2.25)%(highestpVal-1) + 1) + "</sup>"
   }
   return `(<span class="blue">↻</span>↑↑` + Math.floor((pVal-4.9)/(highestpVal-1)).toLocaleString() + ")<sup>" + d((pVal-4.9)%(highestpVal-1) + 1) + "</sup>";
 }
