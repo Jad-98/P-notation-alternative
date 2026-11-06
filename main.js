@@ -641,7 +641,7 @@ if (pVal > 1.775 && pVal <= 1.8) {
   if (pVal == 1/0) {
     return `f<sup><span class="red">‽∞‽</span></sup>(<span class="red">‽(∞)</span>)`
   }
-const highestpVal = 10
+const highestpVal = 2.8
   if (pVal > 10**308) {
     const t = (pVal - 10**308)/7.976931348623157e+307
     return `(<span class="blue">↻</span>↑↑${displayedValueFor(t*(100-0.2)+1.2)})<sup>${d((pVal-4.9)%(highestpVal-1) + 1)}</sup>`
