@@ -620,21 +620,21 @@ if (pVal > 1.775 && pVal <= 1.8) {
   if (pVal >= 2.25 && pVal < 2.5) {
     const t = (pVal - 2.25) / 0.25;
     const start = 1.00;
-    const end = 2.499;
+    const end = 2.49999;
     const exp = (start + t * (end - start));
     return `Ω${d(exp)}`;
    } 
   if (pVal >= 2.5 && pVal < 2.7) {
     const t = (pVal - 2.5) / 0.2;
     const start = 1.00;
-    const end = 2.6999;
+    const end = 2.69999;
     const exp = (start + t * (end - start));
     return `Ω[⬆️]${d(exp)}`;
    } 
   if (pVal >= 2.7 && pVal < 2.8) {
-    const t = (pVal - 2.6) / 0.1;
+    const t = (pVal - 2.7) / 0.1;
     const start = 1.00;
-    const end = 2.7999;
+    const end = 2.79999;
     const exp = (start + t * (end - start));
     return `Ω[⬆️⬆️]${d(exp)}`;
   }
